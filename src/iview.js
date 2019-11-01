@@ -5,7 +5,7 @@ import {
     Page,
     Button,
     Message
-} from 'view-design'
+} from 'iview'
 
 // iview基础模块
 const components = {
