@@ -10,6 +10,7 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'home',
@@ -23,10 +24,17 @@ export default {
       };
   },
 
-  computed: {},
+  computed: {
+    ...mapGetters([
+      'doneTodos',
+      'anthorData'
+    ])
+  },
 
   methods: {
     handelClick () {
+      let ss = 'doneTodos'
+      console.log(ss,'sssssss')
       this.$store.commit('HOME_MUTATION');
       // this.$store.dispatch('sync',{
       //   mutationTypes:'HOME_MUTATION',
