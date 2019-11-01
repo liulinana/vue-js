@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <p>{{message}}</p>
+    <p id="title">{{message}}</p>
     <Button type="primary" @click="()=>handelClick(1)">Primary</Button>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
@@ -23,12 +23,16 @@ export default {
       };
   },
 
+  computed: {},
+
   methods: {
     handelClick (value) {
       console.log(value)
     }
-  },
-  // eslint-disable-next-line no-unused-vars
-
+  }
 }
 </script>
+
+<style lang="less">
+  @import "../styles/Home.less";
+</style>
