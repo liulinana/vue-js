@@ -18,7 +18,8 @@ export const modelA = {
         doneTodos: (state) => {
             return state.todos.filter(todo => todo.done)
         },
-        anthorData: (state, getters) => getters.doneTodos.length
+        anthorData: (state, getters) => getters.doneTodos.length,
+        test: state => id => state.count+id
     },
     actions: {
         sync

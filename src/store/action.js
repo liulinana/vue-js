@@ -5,7 +5,7 @@ function makeAction(store, data) {
 
     return new Promise((resolve, reject) => {
         let params = qs.stringify(data.params);
-        // @ts-ignore
+
         axios({
             method: data.method,
             url: data.url,
@@ -22,5 +22,4 @@ function makeAction(store, data) {
     })
 }
 
-// @ts-ignore
 export const sync = (store,data) => makeAction(store,data);

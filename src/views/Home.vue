@@ -28,13 +28,11 @@ export default {
     ...mapGetters([
       'doneTodos',
       'anthorData'
-    ])
+    ]),
   },
 
   methods: {
     handelClick () {
-      let ss = 'doneTodos'
-      console.log(ss,'sssssss')
       this.$store.commit('HOME_MUTATION');
       // this.$store.dispatch('sync',{
       //   mutationTypes:'HOME_MUTATION',
