@@ -32,8 +32,16 @@ export default {
   },
 
   methods: {
+    test (value) {
+      console.log(value)
+      return value
+    },
     handelClick () {
+      let arry = 1 |> this.test;
+      console.log(arry);
       this.$store.commit('HOME_MUTATION');
+      let aa = [];
+      console.log(aa??length)
       // this.$store.dispatch('sync',{
       //   mutationTypes:'HOME_MUTATION',
       //   num: 100
