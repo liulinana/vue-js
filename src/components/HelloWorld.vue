@@ -17,7 +17,21 @@
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
+    msg: String,
+  },
+
+  data: function() {
+    return {
+      aa: this.test()
+    }
+  },
+  methods:{
+    test () {
+
+    }
+  },
+  computed: {
+
   }
 }
 </script>
