@@ -14,8 +14,8 @@ module.exports = {
     [
       "import",
       {
-        "libraryName": "iview",
-        "style": true
+        "libraryName": "view-design",
+        "libraryDirectory": "src/components"
       }
     ],
     [
