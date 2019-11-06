@@ -10,6 +10,10 @@
     <ul>
       <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
     </ul>
+    <button @click="$emit('enlarge-text',{num:0.1})">
+      Enlarge text
+    </button>
+    <slot></slot>
   </div>
 </template>
 
@@ -18,9 +22,11 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String,
+    mmDd:String
   },
 
   data: function() {
+    console.log(this.$parent ,'this.$parent')
     return {
       aa: this.test()
     }

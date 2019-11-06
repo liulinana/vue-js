@@ -1,7 +1,7 @@
 import axios from 'axios';
 import qs from 'qs';
 
-function makeAction(store, data) {
+export function makeAction(store, data) {
 
     return new Promise((resolve, reject) => {
         let params = qs.stringify(data.params);
@@ -21,5 +21,3 @@ function makeAction(store, data) {
             })
     })
 }
-
-export const sync = (store,data) => makeAction(store,data);

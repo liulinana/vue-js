@@ -9,10 +9,10 @@
       </li>
     </ol>
     <p style="color: blue">{{ message }}</p>
-    <input v-model="message">
+    <input v-model.trim="message">
     <button :disabled="false">Button</button>
     <div id="demo">{{ fullName }}</div>
-    <HelloWorld msg="Welcome to Your Vue.js App"><p>children</p></HelloWorld>
+    <HelloWorld mmDd="c" msg="Welcome to Your Vue.js App" @enlarge-text="helloWorldFun"><p>children</p></HelloWorld>
   </div>
 </template>
 
@@ -40,6 +40,7 @@ export default {
         lastName: 'Bar'
       };
   },
+
   watch:{
 
   },
@@ -66,6 +67,10 @@ export default {
   },
 
   methods: {
+
+    helloWorldFun (value) {
+      console.log(value,'vvv')
+    },
     test (value) {
 
       return value
@@ -73,11 +78,11 @@ export default {
 
     handelClick () {
       this.fullName = 'hhhh';
-      let arry = 1 |> this.test;
-      console.log(arry);
+
+
       this.$store.commit('HOME_MUTATION');
-      let aa = [];
-      console.log(aa??length)
+
+
       this.todos[1].text= 'ddddd'
       // this.$store.dispatch('sync',{
       //   mutationTypes:'HOME_MUTATION',

@@ -1,5 +1,5 @@
 import { HOME_MUTATION } from '../mutation-types/homeModules_types'
-import {sync} from '../action'
+import {sync} from '../actions/homeAction'
 
 export const modelA = {
     state: {
