@@ -12,7 +12,10 @@
     <input v-model.trim="message">
     <button :disabled="false">Button</button>
     <div id="demo">{{ fullName }}</div>
+    <div :style="styles">拾色器</div>
     <HelloWorld mmDd="c" msg="Welcome to Your Vue.js App" @enlarge-text="helloWorldFun"><p>children</p></HelloWorld>
+    <sketch-picker :value="colors" @input="updateValue"></sketch-picker>
+
   </div>
 </template>
 
@@ -20,11 +23,14 @@
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
 import { mapGetters } from 'vuex'
+import { Sketch } from 'vue-color'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    HelloWorld,
+    // eslint-disable-next-line vue/no-unused-components
+    'sketch-picker': Sketch,
   },
 
   data: function() {
@@ -37,12 +43,23 @@ export default {
           { text: '整个牛项目' }
         ],
         firstName: 'Foo',
-        lastName: 'Bar'
+        lastName: 'Bar',
+        colors : '#194d33',
+        styles:{
+          width: '100px',
+          height: '100px',
+          background: '#194d33',
+          color: 'red',
+          fontSize: '13px'
+        }
       };
   },
 
   watch:{
-
+    '$route' (to, from) {
+      // 对路由变化作出响应...
+      console.log(to,from)
+    }
   },
 
   computed: {
@@ -68,6 +85,11 @@ export default {
 
   methods: {
 
+    updateValue (color) {
+
+      this.styles.background=color.hex;
+    },
+    
     helloWorldFun (value) {
       console.log(value,'vvv')
     },
