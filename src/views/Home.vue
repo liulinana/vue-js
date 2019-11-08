@@ -89,7 +89,7 @@ export default {
 
       this.styles.background=color.hex;
     },
-    
+
     helloWorldFun (value) {
       console.log(value,'vvv')
     },
