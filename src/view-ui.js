@@ -1,17 +1,26 @@
 import Vue from 'vue'
-// @ts-ignore
-// @ts-ignore
+
 import {
     Page,
     Button,
-    Message
+    Message,
+    Layout,
+    Menu,
+    MenuItem,
+    Icon,
+    Sider
 } from 'iview'
 
 // iview基础模块
 const components = {
     Page,
     Button,
-    Message
+    Message,
+    Layout,
+    Menu,
+    MenuItem,
+    Icon,
+    Sider
 };
 
 const iviewModule = {
