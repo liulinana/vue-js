@@ -3772,6 +3772,13 @@ ecc-jsbn@~0.1.1:
     jsbn "~0.1.0"
     safer-buffer "^2.1.0"
 
+echarts@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/echarts/-/echarts-4.4.0.tgz#d5260566cef0b98f5a00baf1b5010e92c1c23661"
+  integrity sha512-zJD1YaONA2Ib6rKCpkU9rT/K+OFJ/F0/3Mj5FamGLXytBV5g36gsQGv8sYL7fVs/BFj/sn3wemyctlgIHMCA5w==
+  dependencies:
+    zrender "4.1.1"
+
 editorconfig@^0.15.3:
   version "0.15.3"
   resolved "https://registry.npm.taobao.org/editorconfig/download/editorconfig-0.15.3.tgz#bef84c4e75fb8dcb0ce5cee8efd51c15999befc5"
@@ -8897,6 +8904,16 @@ reselect@^3.0.1:
   resolved "https://registry.npm.taobao.org/reselect/download/reselect-3.0.1.tgz#efdaa98ea7451324d092b2b2163a6a1d7a9a2147"
   integrity sha1-79qpjqdFEyTQkrKyFjpqHXqaIUc=
 
+resize-detector@^0.1.10:
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/resize-detector/-/resize-detector-0.1.10.tgz#1da3f961aa5f914ccbcfd3752d52fd45beeb692c"
+  integrity sha512-iLcXC8A6Fb0DfA+TRiywrK/0A22bFqkhntjMJMEzXDA4XkcEkfwpNbv7W8iewUiD0xYIaeiXOfiEehTqGKsUFw==
+
+resize-detector@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/resize-detector/-/resize-detector-0.2.0.tgz#c4e7cd1426cfc173fba3986c985743c9b2b1f000"
+  integrity sha512-k86ex17guuqLBwTuk2gia+i4z1hEci3Wc+yHmrEp3+blUkgtegqhbuV8FH5ufvBtVqoyt/T+AcbJAnxJXd8CYg==
+
 resize-observer-polyfill@^1.5.0:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
@@ -10400,6 +10417,14 @@ vue-color@^2.7.0:
     material-colors "^1.0.0"
     tinycolor2 "^1.1.2"
 
+vue-echarts@^4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/vue-echarts/-/vue-echarts-4.0.4.tgz#25c2cc2379b6d8a20ef63ac8f5203df5d07098aa"
+  integrity sha512-AemPvRAJlu5JCDKcfVfyNSQ4XipiT3gjy5v+VCLuHzNGUhxnQqBdh7ohaUKzuWBOoKBym3tZL7U9FyWIVPkPHw==
+  dependencies:
+    lodash "^4.17.15"
+    resize-detector "^0.1.10"
+
 vue-eslint-parser@^5.0.0:
   version "5.0.0"
   resolved "https://registry.npm.taobao.org/vue-eslint-parser/download/vue-eslint-parser-5.0.0.tgz#00f4e4da94ec974b821a26ff0ed0f7a78402b8a1"
@@ -11054,3 +11079,8 @@ yorkie@^2.0.0:
     is-ci "^1.0.10"
     normalize-path "^1.0.0"
     strip-indent "^2.0.0"
+
+zrender@4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/zrender/-/zrender-4.1.1.tgz#201e58a55cf1a7e973e1dbad3c15596ef8779f54"
+  integrity sha512-epy1rl82dP/JKxhZl+JRfwcZjobKOoynxBzvBZJBPjmDMAxBE4grLjDryx8BHkHlKyWsUkis4XEL2wN61w5l4w==
