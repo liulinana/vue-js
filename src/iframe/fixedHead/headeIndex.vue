@@ -1,6 +1,6 @@
 <template>
     <Header :style="{position: 'fixed', width: '100%'}">
-        <Menu mode="horizontal" theme="dark" active-name="/" @on-select="handelMenu" :style="bgColor">
+        <Menu mode="horizontal" theme="dark" :active-name="activeName" @on-select="handelMenu" :style="bgColor">
             <div class="layout-logo"></div>
             <div class="layout-nav">
 
@@ -20,7 +20,12 @@
 
                 <MenuItem name="change">
                     <Icon type="md-bulb"></Icon>
-                    <a @click="$emit('changeBanner',{isLeft:!isLeft})">更换导航</a>
+                    <a
+                        @click="$emit('changeBanner',{isLeft:!isLeft})"
+                        :style="{height: '100%', display: 'inline-block'}"
+                    >
+                        更换导航
+                    </a>
                 </MenuItem>
 
             </div>
@@ -48,6 +53,7 @@
                 isLeft: false,
                 isColor: false,
                 menuColors: "#1b2f49",
+                activeName: window.location.pathname,
                 styles:{
                     width: '40px',
                     height: '20px',

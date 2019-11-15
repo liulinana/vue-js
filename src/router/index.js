@@ -25,9 +25,16 @@ const routes = [
   {
     path: '/vueEcharts',
     name: 'vueEcharts',
-    icon: 'ios-keypad',
+    icon: 'ios-stats-outline',
     key: 3,
     component: () => import('../views/Echarts.vue')
+  },
+  {
+    path: '/iviewLibrary',
+    name: 'iviewLibrary',
+    icon: 'ios-paper-outline',
+    key: 4,
+    component: () => import('../views/IviewLibrary.vue')
   }
 ];
 

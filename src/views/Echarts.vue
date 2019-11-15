@@ -1,5 +1,7 @@
 <template>
-    <v-chart :options="polar"/>
+    <div>
+        <v-chart :options="polar" :style="{margin: 'auto'}"/>
+    </div>
 </template>
 
 <script>
