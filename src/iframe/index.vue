@@ -22,11 +22,8 @@
     export default {
         name: "IframeIndex",
         components: {
-            // eslint-disable-next-line vue/no-unused-components
             ContentIndex,
-            // eslint-disable-next-line vue/no-unused-components
             FixedHeadIndex,
-            // eslint-disable-next-line no-undef
             SiderIndex,
         },
 
