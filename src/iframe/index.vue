@@ -1,9 +1,11 @@
-
 <template>
     <div class="layout">
         <Layout>
             <FixedHeadIndex/>
-            <ContentIndex/>
+            <Layout class="siderContent">
+                <SiderIndex/>
+                <ContentIndex/>
+            </Layout>
             <Footer class="layout-footer-center">2019 author by lln</Footer>
         </Layout>
     </div>
@@ -11,14 +13,17 @@
 
 <script>
     import ContentIndex from './content/contentIndex';
-    import FixedHeadIndex from './fixedHead/fixedHeadeIndex'
+    import FixedHeadIndex from './fixedHead/headeIndex';
+    import SiderIndex from './siderLeft/siderIndex'
     export default {
         name: "IframeIndex",
         components: {
             // eslint-disable-next-line vue/no-unused-components
             ContentIndex,
             // eslint-disable-next-line vue/no-unused-components
-            FixedHeadIndex
+            FixedHeadIndex,
+            // eslint-disable-next-line no-undef
+            SiderIndex,
         },
 
     }

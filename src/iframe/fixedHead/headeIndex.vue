@@ -87,5 +87,5 @@
 </script>
 
 <style lang="less">
-    @import "FixedHeadIndex.less";
+    @import "headIndex.less";
 </style>

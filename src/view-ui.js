@@ -8,7 +8,8 @@ import {
     Menu,
     MenuItem,
     Icon,
-    Sider
+    Sider,
+    Submenu
 } from 'iview'
 
 // iview基础模块
@@ -20,7 +21,8 @@ const components = {
     Menu,
     MenuItem,
     Icon,
-    Sider
+    Sider,
+    Submenu
 };
 
 const iviewModule = {

@@ -4,7 +4,7 @@
                 background: '#fff',
                 minHeight: '825px',
                 // position: 'fixed',
-                // width: '100%',
+                width: '100%',
                 // height: '80%'
             }"
     >
