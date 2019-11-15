@@ -3,18 +3,11 @@
     <img alt="Vue logo" src="../assets/logo.png">
     <p :title="message" id="title">{{this.$store.state.a.count}}</p>
     <Button type="primary" @click="handelClick(1)">Primary</Button>
-<!--    <ol>-->
-<!--      <li class="classLi" v-for="item in todos" v-bind:key="item.text">-->
-<!--        {{ item.text }}-->
-<!--      </li>-->
-<!--    </ol>-->
     <p style="color: blue">{{ message }}</p>
     <input v-model.trim="message">
     <button :disabled="false">Button</button>
     <div id="demo">{{ fullName }}</div>
-    <div :style="styles">拾色器</div>
     <HelloWorld mmDd="c" msg="Welcome to Your Vue.js App" @enlarge-text="helloWorldFun"><p>children</p></HelloWorld>
-    <sketch-picker :value="colors" @input="updateValue"></sketch-picker>
 
   </div>
 </template>
@@ -23,14 +16,12 @@
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
 import { mapGetters } from 'vuex'
-import { Sketch } from 'vue-color'
 
 export default {
   name: 'home',
   components: {
     HelloWorld,
-    // eslint-disable-next-line vue/no-unused-components
-    'sketch-picker': Sketch,
+    // 'sketch-picker': Sketch,
   },
 
   data: function() {
