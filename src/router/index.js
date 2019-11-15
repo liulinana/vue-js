@@ -31,10 +31,17 @@ const routes = [
   },
   {
     path: '/iviewLibrary',
-    name: 'iviewLibrary',
+    name: 'iview组件库',
     icon: 'ios-paper-outline',
     key: 4,
     component: () => import('../views/IviewLibrary.vue')
+  },
+  {
+    path: '/downloadSourceCode',
+    name: '下载本系统源码',
+    icon: 'ios-download-outline',
+    key: 5,
+    component: () => import('../views/Download.vue')
   }
 ];
 
