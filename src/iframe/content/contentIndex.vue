@@ -8,7 +8,7 @@
                 // height: '80%'
             }"
     >
-        Content
+        <router-view/>
     </Content>
 </template>
 

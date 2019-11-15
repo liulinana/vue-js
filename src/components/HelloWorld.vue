@@ -26,7 +26,7 @@ export default {
   },
 
   data: function() {
-    console.log(this.$parent ,'this.$parent')
+    // console.log(this.$parent ,'this.$parent')
     return {
       aa: this.test()
     }

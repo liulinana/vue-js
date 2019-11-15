@@ -1,30 +1,23 @@
 <template>
     <Header :style="{position: 'fixed', width: '100%'}">
-        <Menu mode="horizontal" theme="dark" active-name="1" @on-select="handelMenu" :style="bgColor">
+        <Menu mode="horizontal" theme="dark" active-name="/" @on-select="handelMenu" :style="bgColor">
             <div class="layout-logo"></div>
             <div class="layout-nav">
-                <MenuItem name="1" v-if="!isLeft">
-                    <Icon type="ios-navigate"></Icon>
-                    Item 1
-                </MenuItem>
-                <MenuItem name="2" v-if="!isLeft">
-                    <Icon type="ios-keypad"></Icon>
-                    Item 2
-                </MenuItem>
-                <MenuItem name="3" v-if="!isLeft">
-                    <Icon type="ios-analytics"></Icon>
-                    Item 3
-                </MenuItem>
-                <MenuItem name="4" v-if="!isLeft">
-                    <Icon type="ios-paper"></Icon>
-                    Item 4
-                </MenuItem>
+
+                <span  v-if="!isLeft">
+                    <MenuItem v-for="item in menu" v-bind:key="item.key" :name="item.path">
+                        <Icon :type="item.icon"></Icon>
+                        {{item.name}}
+                    </MenuItem>
+                </span>
+
                 <MenuItem name="style">
                     <div :style="styles"></div>
                     <div v-if="isColor" class="sketchPicker">
                         <sketch-picker :value="menuColors" @input="updateValue"></sketch-picker>
                     </div>
                 </MenuItem>
+
                 <MenuItem name="change">
                     <Icon type="md-bulb"></Icon>
                     <a @click="$emit('changeBanner',{isLeft:!isLeft})">更换导航</a>
@@ -37,11 +30,16 @@
 
 <script>
     import { Sketch } from 'vue-color';
+
     export default {
         name: "FixedHeadIndex",
         components: {
             // eslint-disable-next-line vue/no-unused-components
             'sketch-picker': Sketch,
+        },
+
+        props: {
+            menu: Array,
         },
 
         data: function() {
@@ -70,12 +68,18 @@
                 // eslint-disable-next-line no-empty
                 if(name === 'change'){
                     // eslint-disable-next-line no-undef
-                    this.isLeft = !this.isLeft
+                    this.isLeft = !this.isLeft;
+
+                    return false
                 }
                 // eslint-disable-next-line no-empty
                 if(name === 'style'){
-                    this.isColor = !this.isColor
+                    this.isColor = !this.isColor;
+
+                    return false
                 }
+
+                this.$router.push(name)
             },
 
             //拾色器

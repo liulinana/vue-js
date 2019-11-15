@@ -1,10 +1,10 @@
 <template>
     <div class="layout">
         <Layout>
-            <FixedHeadIndex @changeBanner="handelChangeBanner"/>
+            <FixedHeadIndex :menu="routes" @changeBanner="handelChangeBanner"/>
 
             <Layout class="siderContent">
-                <SiderIndex v-if="isShow"/>
+                <SiderIndex :menu="routes" v-if="isShow"/>
                 <ContentIndex/>
             </Layout>
 
@@ -16,7 +16,9 @@
 <script>
     import ContentIndex from './content/contentIndex';
     import FixedHeadIndex from './fixedHead/headeIndex';
-    import SiderIndex from './siderLeft/siderIndex'
+    import SiderIndex from './siderLeft/siderIndex';
+    import router from '@/router/index'
+
     export default {
         name: "IframeIndex",
         components: {
@@ -31,7 +33,8 @@
         data: function() {
 
             return {
-                isShow: false
+                isShow: false,
+                routes: router.options.routes
             }
         },
 

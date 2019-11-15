@@ -3,11 +3,11 @@
     <img alt="Vue logo" src="../assets/logo.png">
     <p :title="message" id="title">{{this.$store.state.a.count}}</p>
     <Button type="primary" @click="handelClick(1)">Primary</Button>
-    <ol>
-      <li class="classLi" v-for="item in todos" v-bind:key="item.text">
-        {{ item.text }}
-      </li>
-    </ol>
+<!--    <ol>-->
+<!--      <li class="classLi" v-for="item in todos" v-bind:key="item.text">-->
+<!--        {{ item.text }}-->
+<!--      </li>-->
+<!--    </ol>-->
     <p style="color: blue">{{ message }}</p>
     <input v-model.trim="message">
     <button :disabled="false">Button</button>
