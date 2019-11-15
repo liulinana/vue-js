@@ -1,11 +1,13 @@
 <template>
     <div class="layout">
         <Layout>
-            <FixedHeadIndex/>
+            <FixedHeadIndex @changeBanner="handelChangeBanner"/>
+
             <Layout class="siderContent">
-                <SiderIndex/>
+                <SiderIndex v-if="isShow"/>
                 <ContentIndex/>
             </Layout>
+
             <Footer class="layout-footer-center">2019 author by lln</Footer>
         </Layout>
     </div>
@@ -25,6 +27,19 @@
             // eslint-disable-next-line no-undef
             SiderIndex,
         },
+
+        data: function() {
+
+            return {
+                isShow: false
+            }
+        },
+
+        methods: {
+            handelChangeBanner(value){
+                this.isShow = value?.isLeft
+            }
+        }
 
     }
 </script>

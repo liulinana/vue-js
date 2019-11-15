@@ -3,19 +3,19 @@
         <Menu mode="horizontal" theme="dark" active-name="1" @on-select="handelMenu" :style="bgColor">
             <div class="layout-logo"></div>
             <div class="layout-nav">
-                <MenuItem name="1" v-if="isLeft">
+                <MenuItem name="1" v-if="!isLeft">
                     <Icon type="ios-navigate"></Icon>
                     Item 1
                 </MenuItem>
-                <MenuItem name="2" v-if="isLeft">
+                <MenuItem name="2" v-if="!isLeft">
                     <Icon type="ios-keypad"></Icon>
                     Item 2
                 </MenuItem>
-                <MenuItem name="3" v-if="isLeft">
+                <MenuItem name="3" v-if="!isLeft">
                     <Icon type="ios-analytics"></Icon>
                     Item 3
                 </MenuItem>
-                <MenuItem name="4" v-if="isLeft">
+                <MenuItem name="4" v-if="!isLeft">
                     <Icon type="ios-paper"></Icon>
                     Item 4
                 </MenuItem>
@@ -27,7 +27,7 @@
                 </MenuItem>
                 <MenuItem name="change">
                     <Icon type="md-bulb"></Icon>
-                    更换导航
+                    <a @click="$emit('changeBanner',{isLeft:!isLeft})">更换导航</a>
                 </MenuItem>
 
             </div>
@@ -47,7 +47,7 @@
         data: function() {
 
             return {
-                isLeft: true,
+                isLeft: false,
                 isColor: false,
                 menuColors: "#1b2f49",
                 styles:{
@@ -69,6 +69,7 @@
             handelMenu(name){
                 // eslint-disable-next-line no-empty
                 if(name === 'change'){
+                    // eslint-disable-next-line no-undef
                     this.isLeft = !this.isLeft
                 }
                 // eslint-disable-next-line no-empty
