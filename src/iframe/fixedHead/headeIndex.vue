@@ -6,8 +6,10 @@
 
                 <span  v-if="!isLeft">
                     <MenuItem v-for="item in menu" v-bind:key="item.key" :name="item.path">
-                        <Icon :type="item.icon"></Icon>
-                        {{item.name}}
+                        <span v-if="item.isShow">
+                            <Icon :type="item.icon"></Icon>
+                            {{item.name}}
+                        </span>
                     </MenuItem>
                 </span>
 

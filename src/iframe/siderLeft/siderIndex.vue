@@ -3,8 +3,10 @@
         <Menu :active-name="activeName" theme="light" width="auto" :open-names="['1']" @on-select="handelMenu">
 
             <MenuItem v-for="item in menu" v-bind:key="item.key" :name="item.path">
-                <Icon :type="item.icon"></Icon>
-                {{item.name}}
+               <span v-if="item.isShow">
+                   <Icon :type="item.icon"></Icon>
+                   {{item.name}}
+               </span>
             </MenuItem>
 
         </Menu>

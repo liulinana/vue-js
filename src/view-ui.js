@@ -9,7 +9,10 @@ import {
     MenuItem,
     Icon,
     Sider,
-    Submenu
+    Submenu,
+    Form,
+    FormItem,
+    Input
 } from 'iview'
 
 // iview基础模块
@@ -22,7 +25,10 @@ const components = {
     MenuItem,
     Icon,
     Sider,
-    Submenu
+    Submenu,
+    Form,
+    FormItem,
+    Input
 };
 
 const iviewModule = {
