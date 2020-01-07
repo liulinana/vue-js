@@ -31,7 +31,7 @@ export default {
         todos: [
           { text: '学习 JavaScript' },
           { text: '学习 Vue' },
-          { text: '整个牛项目' }
+          { text: '整个项目' }
         ],
         firstName: 'Foo',
         lastName: 'Bar',
